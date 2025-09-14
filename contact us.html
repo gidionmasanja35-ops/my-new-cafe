@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<style>
+    .contact-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        background: #11182b;
+        /* dark background */
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+    }
+
+    /* Contact info */
+    .contact-info {
+        flex: 1;
+        margin-top: 4rem;
+    }
+
+    .info-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .icon {
+        font-size: 24px;
+        color: #22c55e;
+        /* green icon */
+    }
+
+    /* Form */
+    .contact-form {
+        flex: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 2rem;
+        color: #0f172a;
+
+
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 150%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        color: #0f172a;
+
+        &:hover {
+            background-color: rgb(19, 4, 33);
+        }
+    }
+
+    .contact-form textarea {
+        grid-column: 1 / span 2;
+        min-height: 120px;
+    }
+
+    .contact-form button {
+        grid-column: 1 / span 2;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        background: #22c55e;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    /* 📱 Responsive for all phones */
+    @media screen and (max-width: 768px) {
+        .contact-container {
+            flex-direction: column;
+        }
+
+        .contact-form {
+            grid-template-columns: 1fr;
+        }
+
+        .contact-form textarea,
+        .contact-form button {
+            grid-column: unset;
+        }
+    }
+
+
+    .loc {
+        margin-top: 0.6rem;
+        color: black;
+        font-size: 15px;
+        text-decoration: none;
+    }
+
+    footer {
+        background: #1e1e1e;
+        color: #fff;
+        padding: 40px 20px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .footer-logo img {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+
+
+    .footer-links h3,
+    .footer-social h3 {
+        margin-bottom: 15px;
+        font-size: 18px;
+        color: #f0f0f0;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: #bbb;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .footer-links ul li a:hover {
+        color: #fff;
+    }
+
+
+    .footer-social a {
+        display: inline-block;
+        margin-right: 15px;
+        font-size: 22px;
+        color: #bbb;
+        transition: 0.3s;
+        text-decoration: none;
+    }
+
+    .footer-social a:hover {
+        color: #fff;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 14px;
+        color: #888;
+    }
+
+
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-links,
+        .footer-social {
+            margin-top: 20px;
+        }
+
+        .footer-logo img {
+            margin-bottom: 10px;
+        }
+    }
+
+
+
+    .cons {
+        margin-top: 4rem;
+        font-size: 15px;
+        font-family: inherit;
+    }
+</style>
+
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a href="#"><img src="cof-removebg-preview.png" alt="" style="width: 100px; "></a> <br>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" style="margin-left: 400px;">
+                    <a class="nav-link active" aria-current="page" href="demo.html">Home</a>&nbsp;&nbsp;&nbsp;
+                    <a class="nav-link" href="menu.html">Menu</a>&nbsp;&nbsp;&nbsp;
+                    <a class="nav-link" href="Contact us.html">contact</a>&nbsp;&nbsp;&nbsp;
+                    <a href="aboutUs.html" class="loc">About Us</a>&nbsp;&nbsp;&nbsp;
+                    <a href="#iframe" class="loc">Location</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="mig">
+
+        <img src="istockphoto-1497005728-612x612.jpg" alt="">
+
+
+    </div>
+
+    <div class="contact-container" id="form">
+        <!-- Contact info -->
+        <div class="contact-info">
+            <div class="info-box">
+                <span class="icon">📞</span>
+                <p><strong>Phone</strong><br>+255 694 424 758</p>
+            </div>
+            <div class="info-box">
+                <span class="icon">✉️</span>
+                <p><strong>Email</strong><br>drivenexperiencecafe35@gmail.com</p>
+            </div>
+        </div>
+
+
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name"> &nbsp;&nbsp;
+            <input type="text" placeholder="Last Name">&nbsp;&nbsp;
+            <input type="email" placeholder="Your Email">&nbsp;&nbsp;
+            <input type="number" placeholder="Phone Number">
+            <textarea placeholder="message...." style="width: 800px;"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+
+
+            <div class="footer-logo">
+                <img src="cof-removebg-preview.png" alt="Logo">
+            </div>
+
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="demo.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact us.html">Contact</a></li>
+                    <li><a href="#iframe">location</a></li>
+                    <li><a href="#">Ask Anything</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 Experience Driven coffee. All rights reserved.
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

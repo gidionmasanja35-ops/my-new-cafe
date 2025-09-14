@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Base styles */
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #004d40;
+        /* Dark green */
+        padding: 10px 20px;
+        color: white;
+    }
+
+    .nav-left,
+    .nav-right {
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+        color: #a5d6a7;
+        /* Light green hover */
+    }
+
+    /* 📱 Responsive styles */
+    @media screen and (max-width: 768px) {
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            background-color: #004d40;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .navbar.active .nav-links {
+            display: flex;
+        }
+
+        .hamburger {
+            display: block;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <span class="hamburger">&#9776;</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Ask Anything</a></li>
+            </ul>
+            <div class="nav-right">
+                <span class="search">&#128269;</span>
+            </div>
+        </nav>
+    </header>
+
+
+
+</body>
+
+</html>

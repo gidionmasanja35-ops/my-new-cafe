@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J5 Coffee</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #fff;
+            color: #333;
+        }
+
+        /* Navbar */
+        header {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header img {
+            height: 60px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #1e90ff;
+        }
+
+        /* Section container */
+        .container {
+            width: 85%;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* App buttons */
+        .app-buttons {
+            margin: 15px 0;
+        }
+
+        .app-buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            background: #444;
+            color: #fff;
+        }
+
+        .app-buttons button:hover {
+            background: #1e90ff;
+        }
+
+        /* Locations */
+        h3 {
+            margin-top: 40px;
+            color: #111;
+        }
+
+        .hours {
+            margin-bottom: 30px;
+        }
+
+        /* Menu */
+        .menu-section {
+            margin: 40px 0;
+        }
+
+        .menu-section h4 {
+            margin-top: 20px;
+            font-size: 18px;
+            text-decoration: underline;
+        }
+
+        .menu-item {
+            margin: 8px 0;
+            font-size: 15px;
+        }
+
+        /* Reviews */
+        .reviews {
+            background: #f8f8f8;
+            padding: 40px 20px;
+            margin-top: 30px;
+        }
+
+        .reviews blockquote {
+            font-style: italic;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .review {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            width: 250px;
+        }
+
+        footer button {
+            padding: 10px 15px;
+            border: none;
+            background: #1e90ff;
+            color: white;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        footer button:hover {
+            background: #0d6efd;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="https://via.placeholder.com/100x60?text=J5" alt="J5 Coffee Logo">
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">COFFEE SHOPS</a></li>
+                <li><a href="#">ONLINE STORE</a></li>
+                <li><a href="#">COFFEE CLUB</a></li>
+                <li><a href="#">SIGN IN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Order Ahead Section -->
+    <div class="container">
+        <p><em>We now have an order ahead app!</em></p>
+        <p>The process is pretty simple:</p>
+        <p>(1) Download the Joe.Coffee app.<br>
+            (2) Find J5 Coffee and select your drink.<br>
+            (3) Get updates when your order is ready for pickup!</p>
+
+        <div class="app-buttons">
+            <button>iPhone App</button>
+            <button>Android App</button>
+        </div>
+    </div>
+
+    <!-- Locations -->
+    <div class="container">
+        <h3>FRONT ST. ESPRESSO BAR</h3>
+        <p class="hours">Monday, Thursday & Friday: 8am - 4pm <br>
+            Saturday: 8am - 6pm <br>
+            Sunday: Noon - 5pm <br>
+            Closed Tuesday & Wednesday</p>
+
+        <h3>FLAGSHIP ESPRESSO BAR & MERCANTILE</h3>
+        <p class="hours">Monday - Friday: 9am - 4pm <br>
+            Saturday: 9am - 5pm <br>
+            Sunday: Closed</p>
+    </div>
+
+    <!-- Menu -->
+    <div class="container menu-section">
+        <h3>STANDARD OFFERINGS</h3>
+        <h4>Traditional</h4>
+        <p class="menu-item"><b>Doppio</b> - 2 shots of espresso</p>
+        <p class="menu-item"><b>Macchiato</b> - Espresso with foam</p>
+        <p class="menu-item"><b>Cappuccino</b> - Espresso with steamed milk foam</p>
+
+        <h4>Hot Drink Sizes (8oz / 12oz / 16oz)</h4>
+        <p class="menu-item"><b>Americano</b> - Espresso with hot water</p>
+        <p class="menu-item"><b>Latte</b> - Espresso with steamed milk</p>
+        <p class="menu-item"><b>Mocha</b> - Espresso, steamed milk & chocolate</p>
+        <p class="menu-item"><b>Chai Latte</b> - Chai & steamed milk</p>
+    </div>
+
+    <!-- Reviews -->
+    <div class="reviews">
+        <blockquote>
+            "This is honestly the best coffee shop around. Quality coffee, great service, good atmosphere!"
+        </blockquote>
+        <div class="review-grid">
+            <div class="review">"Great coffee and a great atmosphere... worth stopping by."</div>
+            <div class="review">"What a discovery... excellent latte, cool space."</div>
+            <div class="review">"A must stop when in Leavenworth. Great selection of coffee gear."</div>
+            <div class="review">"Excellent coffee roasted by a lovely couple."</div>
+            <div class="review">"Strong espresso, stop in!"</div>
+            <div class="review">"Amazing coffee, so delicious and perfect!"</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h3>Get news and updates</h3>
+        <form>
+            <input type="email" placeholder="Email Address">
+            <button type="submit">SIGN UP</button>
+        </form>
+    </footer>
+
+</body>
+
+</html>

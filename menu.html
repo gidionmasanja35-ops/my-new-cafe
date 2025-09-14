@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+
+
+<style>
+    .ask {
+        background-color: gold;
+        height: 70px;
+        padding: 5px 12px 12px 5px;
+        width: 100px;
+        border: 0;
+        margin-left: 1100px;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: green;
+            color: white;
+            transition: ease 2s;
+        }
+    }
+
+
+
+    .menu {
+        padding: 60px 20px;
+        text-align: center;
+        background: #b59c80;
+        border-radius: 15px;
+
+    }
+
+    .menu-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: #5a3825;
+    }
+
+    .menu-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        max-width: 1100px;
+        margin: auto;
+
+    }
+
+    .menu-item {
+        background: #ffffff;
+        border-radius: 16px;
+        box-sizing: 0 4px rgb(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: transform 0.3s;
+
+    }
+
+    .menu-item:hover {}
+
+    .menu-item img {
+        width: 100px;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
+
+    .menu-item h3 {
+        font-size: 1.5rem;
+        color: #3e2723;
+        margin-bottom: 10px;
+    }
+
+    .menu-item p {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 15px;
+    }
+
+    .price {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #c0392b;
+    }
+
+    .star {
+        color: gold;
+    }
+
+    .see {
+        text-align: right;
+    }
+
+    .button {
+        background-color: #16a34a;
+        border-radius: 15px;
+
+    }
+
+    .loc {
+        margin-top: 0.4rem;
+        color: black;
+        font-size: 20px;
+    }
+
+    .navbar-brand {
+        background-color: #16a34a;
+        border-radius: 15px;
+
+
+        &:hover {
+            background-color: #0f172a;
+            color: #9ca3af;
+
+        }
+    }
+
+    a {
+        text-align: center;
+    }
+
+
+    .loc {
+        margin-top: 0.6rem;
+        color: black;
+        font-size: 15px;
+        text-decoration: none;
+    }
+
+    footer {
+        background: #1e1e1e;
+        color: #fff;
+        padding: 40px 20px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .footer-logo img {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+
+
+    .footer-links h3,
+    .footer-social h3 {
+        margin-bottom: 15px;
+        font-size: 18px;
+        color: #f0f0f0;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: #bbb;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .footer-links ul li a:hover {
+        color: #fff;
+    }
+
+
+    .footer-social a {
+        display: inline-block;
+        margin-right: 15px;
+        font-size: 22px;
+        color: #bbb;
+        transition: 0.3s;
+        text-decoration: none;
+    }
+
+    .footer-social a:hover {
+        color: #fff;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 14px;
+        color: #888;
+    }
+
+
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-links,
+        .footer-social {
+            margin-top: 20px;
+        }
+
+        .footer-logo img {
+            margin-bottom: 10px;
+        }
+    }
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a href="#"><img src="cof-removebg-preview.png" alt="" style="width: 100px; "></a> <br>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" style="margin-left: 400px;">
+                    <a class="nav-link active" aria-current="page" href="demo.html">Home</a>&nbsp;&nbsp;&nbsp;
+                    <a class="nav-link" href="menu.html">Menu</a>&nbsp;&nbsp;&nbsp;
+                    <a class="nav-link" href="del.html">contact</a>&nbsp;&nbsp;&nbsp;
+                    <a href="aboutUs.html" class="loc">About Us</a>&nbsp;&nbsp;&nbsp;
+                    <a href="#iframe" class="loc">Location</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="menu" id="menu">
+
+        <h2 class="menu-title">Our Menu</h2>
+        <h3 class="see">see all</h3>
+        <div class="menu-container">
+
+
+            <div class="menu-item">
+                <img src="Cappuccino.jpg" alt="">
+                <h3>cappuccino</h3>
+                <p>strong and bold freshly brewed</p>
+                <span class="price">$4.00 </span>
+                <div class="star"><span>★ ★ ★ ★ ☆</span></div>
+            </div>
+
+            <div class="menu-item">
+                <img src="americano12.jpg" alt="">
+                <h3>Americano</h3>
+                <p>strong and bold freshly brewed</p>
+                <span class="price">$2.50</span>
+                <div class="star"><span>★ ★ ★ ★ ☆</span></div>
+            </div>
+
+            <div class="menu-item">
+                <img src="pexels-chevanon-302899.jpg" alt="">
+                <h3>Latte</h3>
+                <p>strong and bold freshly brewed</p>
+                <span class="price">$3.50</span>
+                <div class="star"><span>★ ★ ★ ★ ☆</span></div>
+            </div>
+
+            <div class="menu-item">
+                <img src="download (4).jpg" alt="">
+                <h3>Turkish Coffee</h3>
+                <p>strong and bold freshly brewed</p>
+                <span class="price">$6.00</span>
+                <div class="star"><span>★ ★ ★ ★ ☆</span></div>
+            </div>
+
+
+
+            <div class="menu-item">
+                <img src="download (2).jpg" alt="">
+                <h3>Espresso Coffee</h3>
+                <p>strong and bold freshly brewed</p>
+                <span class="price">$3.50</span>
+                <div class="star"><span>★ ★ ★ ★ ☆</span></div>
+            </div>
+
+            <div class="menu-item">
+                <img src="download.webp" alt="">
+                <h3>Cortado coffee</h3>
+                <p>strong and bold freshly brewed</p>
+                <span class="price">$3.50</span>
+                <div class="star"><span>★ ★ ★ ★ ☆</span></div>
+            </div>
+
+            <div class="menu-item">
+                <img src="download (5).jpg" alt="">
+                <h3>TZ COFFEE</h3>
+                <p>strong and bold freshly brewed</p>
+                <span class="price">$1.50</span>
+                <div class="star"><span>★ ★ ★ ★ ☆</span></div>
+            </div>
+
+            <div class="menu-item">
+                <img src="download (6).jpg" alt="">
+                <h3>Mocha Coffee</h3>
+                <p>strong and bold freshly brewed</p>
+                <span class="price">$4.50</span>
+                <div class="star"><span>★ ★ ★ ★ ☆</span></div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+
+
+            <div class="footer-logo">
+                <img src="cof-removebg-preview.png" alt="Logo">
+            </div>
+
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="demo.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="del.html">Contact</a></li>
+                    <li><a href="#iframe">location</a></li>
+                    <li><a href="#">Ask Anything</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 Experience Driven coffee. All rights reserved.
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

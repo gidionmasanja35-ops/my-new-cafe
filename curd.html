@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .coffee-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        padding: 15px;
+        transition: transform 0.3s ease;
+    }
+
+    .coffee-card:hover {
+        transform: scale(1.03);
+    }
+
+    .coffee-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .coffee-card h3 {
+        color: #2e7d32;
+        margin: 10px 0;
+    }
+
+    .coffee-card p {
+        font-size: 0.95em;
+        color: #555;
+        margin-bottom: 15px;
+    }
+
+    .coffee-card button {
+        background-color: #2e7d32;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .coffee-card button:hover {
+        background-color: #1b5e20;
+    }
+
+    /* 📱 Media Query for Small Screens */
+    @media screen and (max-width: 600px) {
+        .coffee-card img {
+            height: 150px;
+        }
+
+        .coffee-card p {
+            font-size: 0.85em;
+        }
+
+        .coffee-card button {
+            padding: 8px 16px;
+        }
+    }
+</style>
+
+<body>
+    <div class="card-container">
+        <div class="coffee-card">
+            <img src="Cappuccino.jpg" alt="Turkish Coffee">
+            <h3>Cappuccino Coffee</h3>
+            <p>The cappuccino coffee is a mild, creamy brew with a velvety texture. Steamed milk highlights the bold,
+                smooth
+                flavors of arabica espresso. The cappuccino is often presented in a large round coffee cup and is
+                finished
+                .</p>
+            <button>Order</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="americano12.jpg" alt="Cappuccino">
+            <h3>Americano Coffee</h3>
+            <p>Americano coffee is a type of coffee drink that is prepared by adding hot water to a shot of espresso,
+                giving
+                it a milder flavor compared to straight espresso. This method of preparation dilutes the espresso,
+                making it
+            </p>
+            <button>Order</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="pexels-chevanon-302899.jpg" alt="Americano">
+            <h3>Latte Coffee</h3>
+            <p>A latte is a milky coffee drink. It’s made with espresso and steamed milk. The typical latte has one or
+                two
+                shots of espresso. This is topped with a lot of steamed milk. A thin layer of milk foam sits on top
+                are known for their smooth, creamy taste. They’re less strong than plain espresso.. </p>
+            <button>Order</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="download (4).jpg" alt="Turkish Coffee">
+            <h3>Turkish Coffee</h3>
+            <p>
+                Copilot Search Branding
+
+                Turkish coffee - Wikipedia
+                Turkish coffee is a traditional coffee preparation method known for its strong flavor, unique brewing
+                process, and cultural significance, often served with a side of water and sweets.
+                What is Turkish Coffee?
+            </p>
+            <button>Order</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="download (2).jpg" alt="Espresso">
+            <h3>Espresso Coffee</h3>
+            <p> is a concentrated form of coffee produced by forcing hot
+                water
+                under high pressure through finely ground coffee beans. Originating in Italy, espresso has become one of
+                the
+                most popular coffee-brewing methods worldwide. It is characterized by its small serving size, typically
+
+            </p>
+            <button>Order</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="download (5).jpg" alt="TZ Coffee">
+            <h3>TZ Coffee</h3>
+            <p> is a concentrated form of coffee produced by forcing hot
+                water
+                under high pressure through finely ground coffee beans. Originating in Italy, espresso has become one of
+                the
+                most popular coffee-brewing methods worldwide. It is characterized by its small serving size, typically
+
+            </p>
+            <button>Order</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="download.webp" alt="Espresso">
+            <h3>cortado Coffee</h3>
+            <p> A cortado is a Spanish espresso drink made by pouring hot milk into espresso, a 1:1 ratio of coffee to
+                milk
+                under high pressure through finely ground coffee beans. Originating in Italy, espresso has become one of
+                the
+                most popular coffee-brewing methods worldwide. It is characterized by its small serving size, typically
+
+            </p>
+            <button>Order</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="download (6).jpg" alt="Espresso">
+            <h3>Mocha Coffee</h3>
+            <p> A mocha, or caffè mocha, is a coffee drink made with espresso, chocolate syrup or powder, and steamed
+                milk, often topped with whipped cream
+                under high pressure through finely ground coffee beans. Originating in Italy, espresso has become one of
+                the
+                most popular coffee-brewing methods worldwide. It is characterized by its small serving size, typically
+
+            </p>
+            <button>Order</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

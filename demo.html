@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cafe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<style>
+    body {
+        background-color: #333;
+        background-image: url(fav.jpg);
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        min-height: 100vh;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+
+
+    }
+
+
+    @media only screen and (max-width:600px) {
+
+        .card {
+            margin-left: 20px;
+        }
+
+        .a {
+            font-size: 10px;
+        }
+
+        .h2 {
+            font-size: 20px;
+            color: #16a34a;
+        }
+    }
+
+
+
+
+    a {
+        text-decoration: none;
+        font-size: 20px;
+
+        &:hover {
+            color: brown;
+            cursor: pointer;
+        }
+
+    }
+
+    .ask {
+        background-color: gold;
+        height: 70px;
+        padding: 5px 12px 12px 5px;
+        width: 100px;
+        border: 0;
+        margin-left: 800px;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: green;
+            color: white;
+            transition: ease 2s;
+        }
+    }
+
+    div {
+        margin: auto;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 40px;
+        text-align: center;
+        margin-top: 200px;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+
+    .sem {
+        font-size: 60px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: aliceblue;
+
+
+    }
+
+    .me {
+        font-size: large;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: aliceblue;
+    }
+
+
+
+
+
+    input {
+        width: 250px;
+        height: 40px;
+        border: 0;
+        border-radius: 10px;
+        color: rgb(239, 235, 235);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 15px;
+        background-color: rgb(69, 55, 55);
+
+
+    }
+
+    textarea {
+        background-color: rgb(69, 55, 55);
+
+
+
+    }
+
+
+    .saturn {
+        text-align: center;
+        font-size: 15px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .cont a {
+        display: flex;
+
+    }
+
+    .map {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+
+
+
+
+    }
+
+    .trou {
+        color: rgb(18, 19, 19);
+    }
+
+    iframe {
+        width: 100%;
+        height: 500px;
+
+
+    }
+
+    .lift {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0f172a;
+        color: #f2f3f8;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        left: 0;
+        right: 0;
+
+    }
+
+    .contact-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        background: #0f172a;
+        /* dark background */
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+    }
+
+    /* Contact info */
+    .contact-info {
+        flex: 1;
+    }
+
+    .info-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .icon {
+        font-size: 24px;
+        color: #22c55e;
+        /* green icon */
+    }
+
+    /* Form */
+    .contact-form {
+        flex: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .contact-form textarea {
+        grid-column: 1 / span 2;
+        min-height: 120px;
+    }
+
+    .contact-form button {
+        grid-column: 1 / span 2;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        background: #22c55e;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    /* 📱 Responsive for all phones */
+    @media screen and (max-width: 768px) {
+        .contact-container {
+            flex-direction: column;
+        }
+
+        .contact-form {
+            grid-template-columns: 1fr;
+        }
+
+        .contact-form textarea,
+        .contact-form button {
+            grid-column: unset;
+        }
+    }
+
+    .des {
+        width: 500px;
+    }
+
+    .fumb {
+        border-radius: 15px;
+        margin-left: 38PX;
+    }
+
+    .links {
+        width: 700px;
+        height: 400px;
+        margin: 50px;
+        margin: auto;
+        position: relative;
+        margin-left: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        background-color: #9ca3af;
+    }
+
+    /* Right paragraph (horizontal text) */
+    .right-text {
+        position: absolute;
+        top: 4rem;
+        right: -420px;
+        /* push it outside the box */
+        width: 400px;
+        /* paragraph width */
+        text-align: left;
+    }
+
+    .proh {
+        width: 700px;
+        height: 400px;
+
+
+    }
+
+    .living {
+        background-color: #a5a7a5;
+    }
+
+    .fux {
+        margin-top: 2rem;
+    }
+
+    .h2 {
+        color: #16a34a;
+    }
+
+    .online {
+        background-color: #16a34a;
+        border-radius: 15px;
+    }
+
+    .navbar-brand {
+        background-color: #16a34a;
+        border-radius: 15px;
+
+
+
+        &:hover {
+            background-color: #0f172a;
+            color: #9ca3af;
+
+        }
+    }
+
+    .button {
+        background-color: #16a34a;
+        border-radius: 15px;
+
+    }
+
+    .loc {
+        margin-top: 0.6rem;
+        color: black;
+        font-size: 15px;
+    }
+
+    .hos-img {
+        width: 70px;
+        margin-left: 600px;
+
+    }
+
+    footer {
+        background: #1e1e1e;
+        color: #fff;
+        padding: 40px 20px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .footer-logo img {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+
+
+    .footer-links h3,
+    .footer-social h3 {
+        margin-bottom: 15px;
+        font-size: 18px;
+        color: #f0f0f0;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: #bbb;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .footer-links ul li a:hover {
+        color: #ef2121;
+    }
+
+
+    .footer-social a {
+        display: inline-block;
+        margin-right: 15px;
+        font-size: 22px;
+        color: #bbb;
+        transition: 0.3s;
+        text-decoration: none;
+    }
+
+    .footer-social a:hover {
+        color: #fff;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 14px;
+        color: #888;
+    }
+
+
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-links,
+        .footer-social {
+            margin-top: 20px;
+        }
+
+        .footer-logo img {
+            margin-bottom: 10px;
+        }
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        background-color: #bbb;
+        margin-top: 20rem;
+    }
+
+    .coffee-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        padding: 15px;
+        transition: transform 0.3s ease;
+    }
+
+    .coffee-card:hover {
+        transform: scale(1.03);
+    }
+
+    .coffee-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .coffee-card h3 {
+        color: #2e7d32;
+        margin: 10px 0;
+    }
+
+    .coffee-card p {
+        font-size: 0.95em;
+        color: #555;
+        margin-bottom: 15px;
+    }
+
+    .coffee-card button {
+        background-color: #2e7d32;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .coffee-card button:hover {
+        background-color: #1b5e20;
+    }
+
+    /* 📱 Media Query for Small Screens */
+    @media screen and (max-width: 600px) {
+        .coffee-card img {
+            height: 150px;
+        }
+
+        .coffee-card p {
+            font-size: 0.85em;
+        }
+
+        .coffee-card button {
+            padding: 8px 16px;
+        }
+    }
+
+    .btn {
+        background-color: #22c55e;
+        margin-left: 500px;
+        color: #1e1e1e;
+        border-radius: 20px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .btn {
+            margin-left: 0;
+        }
+    }
+</style>
+
+<body>
+    <!-- <nav>
+        <a href="#home">home</a>
+        <a href="menu.html">menu</a>
+        <a href="#contact">contact</a>
+        <a href="#iframe">Location</a>
+
+        <a href="#form" class="ask">Askanything💬</a>
+
+    </nav> -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+
+            <a href="#"><img src="cof-removebg-preview.png" alt="" style="width: 100px; "></a> <br>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="demo.html">Home</a>&nbsp;&nbsp;&nbsp;
+                    <a class="nav-link" href="menu.html">Menu</a>&nbsp;&nbsp;&nbsp;
+                    <a class="nav-link" href="del.html">contact</a>&nbsp;&nbsp;&nbsp;
+                    <a href="aboutUs.html" class="loc">About Us</a>&nbsp;&nbsp;&nbsp;
+                    <a href="#iframe" class="loc">Location</a>
+                    <div>
+                        <button class="btn"><a class="navbar-bran" href="#form">Askanything💬</a></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <h1 class="sem">Experience Driven Cafe</h1>
+    <p class="me"> A "Rost your Own" Workshop, where customers can learn the basics of coffee rosting and take home
+        their own
+        custom roasted beans or a "coffee & canvas" events, combining tasting with guided painting session.</p>
+    <!-- <img src="coffee-cup.png" alt="" class="hos-img"> -->
+    <!-- <div class="button">
+        <a href="#order" class="law"> Order Online</a>
+    </div> -->
+
+    <div class="card-container">
+        <div class="coffee-card">
+            <img src="Cappuccino.jpg" alt="Turkish Coffee">
+            <h3>Cappuccino </h3>
+            <p>A cappuccino is an Italian espresso-based coffee drink made with equal parts espresso, steamed milk, and
+                milk foam, creating a balanced, creamy texture with a rich espresso flavor and a sweet taste from the
+                milk
+
+            </p>
+            <button>Order</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="americano12.jpg" alt="Cappuccino">
+            <h3>Americano Coffee</h3>
+            <p>An americano is an espresso-based coffee drink made by diluting espresso with hot water, resulting in a
+                coffee that is similar in size to a brewed coffee but with a more complex flavor. Traditionally,
+
+            </p>
+            <button>Order</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="pexels-chevanon-302899.jpg" alt="Americano">
+            <h3>Latte Coffee</h3>
+            <p>A latte is an espresso-based drink made with one or two shots of espresso, lots of steamed milk, and a
+                thin layer of milk foam on top. The steamed milk is mixed into the espresso, creating a creamy
+            </p>
+            <button>Order</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="download (4).jpg" alt="Turkish Coffee">
+            <h3>Turkish Coffee</h3>
+            <p>
+                Turkish coffee is an unfiltered coffee brewed by boiling very finely ground coffee beans, water, and
+                sugar in a cezve (a small, long-handled pot). It is served in small cups and allowed to settle so the
+                grounds sink to the bottom.
+            </p>
+            <button>Order</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="download (2).jpg" alt="Espresso">
+            <h3>Espresso Coffee</h3>
+            <p>Espresso is a concentrated coffee brewed by forcing high-pressure hot water through finely-ground coffee
+                beans, creating a bold, rich shot with a characteristic foamy layer called crema. Originating in Italy.
+
+            </p>
+            <button>Order</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="download (5).jpg" alt="TZ Coffee">
+            <h3>TZ Coffee</h3>
+            <p> Tanzania is a major African coffee producer known for its high-quality Arabica beans grown on volcanic
+                slopes near Mount Kilimanjaro and in the Southern Highlands, as well as
+                Lake Victoria region.
+
+            </p>
+            <button>Order</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="download.webp" alt="Cortado Coffee">
+            <h3>cortado Coffee</h3>
+            <p> A cortado is a Spanish coffee beverage consisting of espresso "cut" with a roughly equal amount of warm,
+                steamed milk, which has a smooth texture with minimal froth. The steamed milk reduces the espresso's
+                acidity,
+
+            </p>
+            <button>Order</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="download (6).jpg" alt="Espresso">
+            <h3>Mocha Coffee</h3>
+            <p> A mocha, or caffè mocha, is a coffee drink made with espresso, chocolate syrup or powder, and steamed
+                milk, often topped with whipped cream. It's a popular choice that blends the richness of coffee with the
+
+
+            </p>
+            <button>Order</button>
+        </div>
+
+    </div>
+
+
+    <!-- <section id="order">
+        <div class="card" id="ca">
+            <div class="zoom-img">
+                <img src="Cappuccino.jpg" alt="This zooms-in really well and smooth">
+            </div>
+            <h2>Cappuccino New</h2>
+            <p>The cappuccino coffee is a mild, creamy brew with a velvety texture. Steamed milk highlights the bold,
+                smooth
+                flavors of arabica espresso. The cappuccino is often presented in a large round coffee cup and is
+                finished
+                with “latte art” and a dash of fine coffee powder.The cappuccino coffee is a
+                velvety texture. Steamed milk highlights the bold, smooth flavors of arabica.</p>
+            <a href="lafia.html"><input type="submit" value="Order"></a>
+
+
+        </div>
+
+        <div class="card">
+            <div class="zoom-img">
+                <img src="americano12.jpg" alt="This zooms-in really well and smooth">
+            </div>
+            <h2>Americano </h2>
+            <p>Americano coffee is a type of coffee drink that is prepared by adding hot water to a shot of espresso,
+                giving
+                it a milder flavor compared to straight espresso. This method of preparation dilutes the espresso,
+                making it
+                more approachable for those who find espresso too strong or bitter. The drinks originated in different
+                regions (Italy/Spain and Australia/New Zealand,)</p>
+            <a href="lafia.html"><input type="submit" value="Order"></a>
+
+
+        </div>
+        <div class="card">
+            <div class="zoom-img">
+                <img src="pexels-chevanon-302899.jpg" alt="This zooms-in really well and smooth">
+            </div>
+            <h2>Latte</h2>
+            <p>A latte is a milky coffee drink. It’s made with espresso and steamed milk. The typical latte has one or
+                two
+                shots of espresso. This is topped with a lot of steamed milk. A thin layer of milk foam sits on top
+                are known for their smooth, creamy taste. They’re less strong than plain espresso.. Latte or caffè
+                also known as caffè e latte, caffellatte or caffelatte, is a coffee drink areknown
+                taste. </p>
+            <a href="lafia.html"><input type="submit" value="Order"></a>
+
+        </div>
+
+        <div class="card">
+            <div class="zoom-img">
+                <img src="pexels-chevanon-302899.jpg" alt="This zooms-in really well and smooth">
+            </div>
+            <h2>Turkish Coffee</h2>
+            <p>
+                Copilot Search Branding
+
+                Turkish coffee - Wikipedia
+                Turkish coffee is a traditional coffee preparation method known for its strong flavor, unique brewing
+                process, and cultural significance, often served with a side of water and sweets.
+                What is Turkish Coffee?
+                Turkish coffee is made using very finely ground coffee beans, typically brewed in a special pot called
+                a. Unlike other coffee methods, Turkish coffee is unfiltered coffee</p>
+            <a href="lafia.html"><input type="submit" value="Order"></a>
+
+
+        </div>
+        <div class="card">
+            <div class="zoom-img">
+                <img src="Cappuccino.jpg" alt="This zooms-in really well and smooth">
+            </div>
+            <h2>Espresso Coffee</h2>
+            <p> is a concentrated form of coffee produced by forcing hot
+                water
+                under high pressure through finely ground coffee beans. Originating in Italy, espresso has become one of
+                the
+                most popular coffee-brewing methods worldwide. It is characterized by its small serving size, typically
+                25–30 ml, and its distinctive layers: a dark body topped with a lighter-colored foam called "crema"<br>
+                coffee
+                available in all country
+            </p>
+            <a href="lafia.html"><input type="submit" value="Order"></a>
+
+        </div>
+        <div class="card">
+            <div class="zoom-img">
+                <img src="Cappuccino.jpg" alt="This zooms-in really well and smooth">
+            </div>
+            <h2>TZ COFFEE</h2>
+            <p> is a concentrated form of coffee produced by forcing hot water
+                under high pressure through finely ground coffee beans. Originating in Italy, espresso has become one of
+                the
+                most popular coffee-brewing methods worldwide. It is characterized by its small serving size, typically
+                25–30 ml, and its distinctive layers: a dark body topped with a lighter-colored foam called "crema"
+                coffee
+                From pale region,massai,mburu
+            </p>
+            <a href="lafia.html"><input type="submit" value="Order"></a>
+
+        </div>
+    </section> -->
+
+    <!-- <div class="living">
+        <div class="links">
+            <iframe src="https://www.youtube.com/watch?v=TT9wIWPlOYs" frameborder="0" class="proh"></iframe>
+            <div class="right-text" id="fux">
+
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                This paragraph is placed on the right side of the box,
+                and the words are displayed straight and horizontal, not rotated.
+            </div>
+        </div>
+    </div> -->
+
+    <div class="contact-container" id="form">
+        <!-- Contact info -->
+        <div class="contact-info">
+            <div class="info-box">
+                <span class="icon">📞</span>
+                <!-- <p><strong>Phone</strong><br>+255 694 424 758</p> -->
+            </div>
+            <div class="info-box">
+                <span class="icon">✉️</span>
+                <!-- <p><strong>Email</strong><br>drivenexperiencecafe35@gmail.com</p> -->
+            </div>
+        </div>
+
+        <!-- Contact form -->
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name"> &nbsp;&nbsp;
+            <input type="text" placeholder="Last Name">&nbsp;&nbsp;
+            <input type="email" placeholder="Your Email">&nbsp;&nbsp;
+            <input type="number" placeholder="Phone Number">
+            <textarea placeholder="You want to ask for..."></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+
+    <div class="map">
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31716.8257306621!2d38.87941315602403!3d-6.444963186949232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c917c91107053%3A0xaa179fd89cc76714!2sBagamoyo!5e0!3m2!1sen!2stz!4v1757081175502!5m2!1sen!2stz"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" id="iframe"></iframe>
+    </div>
+
+
+
+
+
+    <footer>
+        <div class="footer-container">
+
+
+            <div class="footer-logo">
+                <img src="cof-removebg-preview.png" alt="Logo">
+            </div>
+
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="demo.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="del.html">Contact</a></li>
+                    <li><a href="#iframe">Location</a></li>
+                    <li><a href="#">Ask Anything</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 Experience Driven coffee. All rights reserved.
+
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
